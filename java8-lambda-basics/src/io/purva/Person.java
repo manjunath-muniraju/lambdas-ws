@@ -4,10 +4,10 @@ public class Person {
 	
 	private String firstName;
 	private String lastName;
-	private String age;
+	private int age;
 	
 	
-	public Person(String firstName, String lastName, String age) {
+	public Person(String firstName, String lastName, int age) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -26,10 +26,10 @@ public class Person {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	

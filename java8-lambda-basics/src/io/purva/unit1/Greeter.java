@@ -1,4 +1,4 @@
-package io.purva;
+package io.purva.unit1;
 
 public class Greeter {
 
@@ -9,13 +9,18 @@ public class Greeter {
 		greeter.greet(helloWorldGreeting);
 		
 		MyLambda myLambdaFunction = () -> System.out.print("Hello World");
+		
 		Greeting myLambdaFunctionGreet = () -> System.out.println("Hello World in Lambda");
+		Greeting normalObject = new HelloWorldGreeting();
 		
 		//FunctionalInterface myLambdaFunctionNew = () -> System.out.print("Hello World");
 		
 		MyAdd addFunction = (int a, int b) -> a + b;
 		
+		myLambdaFunction.foo();
+		
 		myLambdaFunctionGreet.perform();
+		normalObject.perform();
 		
 		
 		Greeting innerClassGreeting = new Greeting() {
@@ -38,10 +43,11 @@ public class Greeter {
 
 }
 
+// in this case or rule is if we are using below interface for lambda then there is should be only one method declared inside the interface.
 interface MyLambda {
 	void foo();
 }
 
 interface MyAdd {
-	int foo(int x, int y);
+	int add(int x, int y);
 }

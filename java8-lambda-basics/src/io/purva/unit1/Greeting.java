@@ -1,4 +1,4 @@
-package io.purva;
+package io.purva.unit1;
 
 @FunctionalInterface
 public interface Greeting {
